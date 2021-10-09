@@ -284,6 +284,7 @@ body {
   display: inline-block;
   background: linear-gradient(to right, #502050, #ee68a4);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   font-size: 1.2em;
   font-weight: 700;
