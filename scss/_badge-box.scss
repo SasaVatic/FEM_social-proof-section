@@ -5,6 +5,8 @@
     border-radius: 5px;
     padding: 1.5rem;
     transition: all 0.2s ease-in-out;
+    animation: slideInRight 1s ease-in-out backwards;
+    animation-delay: calc(0.6s * var(--i));
 
     &:hover {
         background-color: $very-dark-magenta;

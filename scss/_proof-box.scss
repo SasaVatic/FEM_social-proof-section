@@ -4,9 +4,11 @@
     padding: 3.5rem 3rem;
     border-radius: 0.5rem;
     transition: all 0.2s ease-in-out;
+    animation: slideInBottom 1s ease-in-out backwards;
+    animation-delay: calc(0.7s * var(--i));
 
     &:hover {
-        transform: translateY(1rem) scale(1.05);
+        transform: scale(1.05);
         box-shadow: 5px 5px 10px rgba($black, 0.3);
         background-color: $light-grayish-magenta;
 
@@ -66,13 +68,13 @@
         &:nth-child(2) {
             transform: translateY(1rem);
             &:hover {
-                transform: translateY(0) scale(1.05);
+                transform: scale(1.05);
             }
         }
         &:nth-child(3) {
             transform: translateY(2rem);
             &:hover {
-                transform: translateY(0) scale(1.05);
+                transform: scale(1.05);
             }
         }
     }

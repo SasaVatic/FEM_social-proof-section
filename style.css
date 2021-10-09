@@ -1,3 +1,36 @@
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-8rem); }
+  70% {
+    opacity: .5;
+    transform: translateX(4rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(-2rem); } }
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(8rem); }
+  70% {
+    opacity: .5;
+    transform: translateX(-4rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(4rem); } }
+
+@keyframes slideInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(8rem); }
+  70% {
+    opacity: .5;
+    transform: translateY(-4rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(4rem); } }
+
 *,
 *::before,
 *::after {
@@ -15,7 +48,8 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: #f7f2f7; }
+  background-color: #f7f2f7;
+  overflow-x: hidden; }
   @media (min-width: 768px) {
     body {
       padding: 2rem; } }
@@ -134,7 +168,8 @@ body {
 
 .heading-box {
   line-height: 1;
-  text-align: center; }
+  text-align: center;
+  animation: slideInLeft 1s ease-in-out; }
   .heading-box__text {
     font-size: 0.9em;
     font-weight: 500;
@@ -156,7 +191,9 @@ body {
   background-color: #f7f2f7;
   border-radius: 5px;
   padding: 1.5rem;
-  transition: all 0.2s ease-in-out; }
+  transition: all 0.2s ease-in-out;
+  animation: slideInRight 1s ease-in-out backwards;
+  animation-delay: calc(0.6s * var(--i)); }
   .badge-box:hover {
     background-color: #502050;
     transform: scale(1.05);
@@ -216,9 +253,11 @@ body {
   background-color: #502050;
   padding: 3.5rem 3rem;
   border-radius: 0.5rem;
-  transition: all 0.2s ease-in-out; }
+  transition: all 0.2s ease-in-out;
+  animation: slideInBottom 1s ease-in-out backwards;
+  animation-delay: calc(0.7s * var(--i)); }
   .proof-box:hover {
-    transform: translateY(1rem) scale(1.05);
+    transform: scale(1.05);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     background-color: #f7f2f7; }
     .proof-box:hover .proof-box__heading--main {
@@ -257,11 +296,11 @@ body {
     .proof-box:nth-child(2) {
       transform: translateY(1rem); }
       .proof-box:nth-child(2):hover {
-        transform: translateY(0) scale(1.05); }
+        transform: scale(1.05); }
     .proof-box:nth-child(3) {
       transform: translateY(2rem); }
       .proof-box:nth-child(3):hover {
-        transform: translateY(0) scale(1.05); } }
+        transform: scale(1.05); } }
   @media (min-width: 992px) {
     .proof-box {
       font-size: 1em; }
@@ -278,7 +317,9 @@ body {
   font-size: 1em;
   text-align: center;
   font-weight: 500;
-  color: #937b92; }
+  color: #937b92;
+  animation: slideInRight 1s ease-in-out 5s backwards;
+  animation: name duration timing-function delay iteration-count direction fill-mode; }
 
 .attribution a {
   display: inline-block;

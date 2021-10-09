@@ -1,6 +1,7 @@
 .heading-box {
     line-height: 1;
     text-align: center;
+    animation: slideInLeft 1s ease-in-out;
 
     &__text {
         font-size: 0.9em;

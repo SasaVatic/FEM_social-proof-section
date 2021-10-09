@@ -18,7 +18,8 @@ body {
     justify-content: center;
     flex-direction: column;
     background-color: $light-grayish-magenta;
-    
+    overflow-x: hidden;
+
     @include tablet() {
         & {
             padding: 2rem;
