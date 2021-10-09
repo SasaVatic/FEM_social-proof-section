@@ -10,6 +10,7 @@
     display: inline-block;
     background: linear-gradient(to right, $very-dark-magenta, $soft-pink);
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
     font-size: 1.2em;
     font-weight: $font-weight-bold;
