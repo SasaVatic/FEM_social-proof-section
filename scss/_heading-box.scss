@@ -1,0 +1,26 @@
+.heading-box {
+    line-height: 1;
+    text-align: center;
+
+    &__text {
+        font-size: 0.9em;
+        font-weight: $font-weight-medium;
+        color: $dark-grayish-magenta;
+        line-height: 1.6;
+        margin-top: 2rem;
+    }
+
+    @include tablet() {
+        & {
+            text-align: start;
+        }
+        &__text {
+            font-size: 1.2em;
+        }
+    }
+    @include desktop() {
+        &__text {
+            font-size: 1.3em;
+        }
+    }
+}

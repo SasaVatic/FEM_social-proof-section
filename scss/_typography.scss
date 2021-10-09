@@ -1,0 +1,31 @@
+body {
+    font-size: $default-font-size;
+    font-family: $font-family;
+    font-weight: $font-weight-regular;
+    user-select: none;
+}
+
+.heading-primary {
+    font-size: 2em;
+    font-weight: $font-weight-bold;
+    color: $very-dark-magenta;
+    margin: 0 auto;
+    width: 90%;
+
+    @include tablet() {
+        & {
+            margin: 0 auto 0 0;
+        }
+    }
+    @include laptop() {
+        & {
+            font-size: 2.5em;
+        }
+    }
+    @include desktop() {
+        & {
+            font-size: 3em;
+            width: 80%;
+        }
+    }
+}

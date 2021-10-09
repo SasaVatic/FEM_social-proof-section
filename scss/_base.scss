@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 65.2%;
+}
+
+body {
+    box-sizing: border-box;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: $light-grayish-magenta;
+    
+    @include tablet() {
+        & {
+            padding: 2rem;
+        }
+    }
+}
